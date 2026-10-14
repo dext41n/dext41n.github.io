@@ -40,6 +40,27 @@
       padding: 3rem 0 2rem;
     }
 
+    .intro {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .intro-text {
+      text-align: left;
+    }
+
+    .avatar {
+      display: block;
+      flex-shrink: 0;
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--border);
+    }
+
     h1 {
       margin: 0;
       font-size: 2.2rem;
@@ -104,6 +125,24 @@
       color: var(--muted);
     }
 
+    figure {
+      margin: 1rem 0 0;
+    }
+
+    figure img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    figcaption {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 0.4rem;
+      text-align: center;
+    }
+
     footer {
       text-align: center;
       color: var(--muted);
@@ -123,6 +162,15 @@
       section {
         padding: 1.1rem;
       }
+
+      .intro {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .intro-text {
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -130,10 +178,15 @@
 <body>
   <div class="container">
     <header>
-      <h1>Matěj Choutka</h1>
-      <p class="subtitle">
-        Mathematical modeling Bc. student, Charles University.
-      </p>
+      <div class="intro">
+        <img class="avatar" src="img/avatar.jpg" alt="Matěj Choutka">
+        <div class="intro-text">
+          <h1>Matěj Choutka</h1>
+          <p class="subtitle">
+            Mathematical modeling Bc. student, Charles University.
+          </p>
+        </div>
+      </div>
 
       <nav>
         <a href="mailto:matej.choutka@gmail.com">E-mail</a>
@@ -160,7 +213,7 @@
           Analysis of moisture sources and transport corridors of Atmospheric River connected with
           2002 floods in Czechia. Supervised by Natália M. Crespo.
         </p>
-      </div>
+        </div>
     </section>
 
     <footer>
